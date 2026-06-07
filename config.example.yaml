@@ -1,0 +1,86 @@
+scan:
+  roots:
+    - "samples"
+  include_extensions:
+    - ".txt"
+    - ".md"
+    - ".csv"
+    - ".log"
+    - ".docx"
+    - ".xlsx"
+    - ".xlsm"
+    - ".pptx"
+    - ".pdf"
+  exclude_dir_patterns:
+    - "old"
+    - "backup"
+    - "bk"
+    - "退避"
+    - "廃止"
+    - "削除"
+    - "temp"
+    - "tmp"
+  exclude_file_prefixes:
+    - "~$"
+  max_file_mb: 50
+  max_extract_chars_per_file: 200000
+  chunk_size: 1200
+  chunk_overlap: 200
+  follow_symlinks: false
+  full_rescan: false
+
+metadata:
+  archive_keywords:
+    - "old"
+    - "backup"
+    - "bk"
+    - "退避"
+    - "廃止"
+    - "削除"
+    - "旧"
+    - "コピー"
+    - "修正前"
+  latest_positive_keywords:
+    - "最新版"
+    - "最新"
+    - "確定"
+    - "正式"
+    - "現行"
+    - "リリース済"
+  document_type_keywords:
+    画面設計書:
+      - "画面設計"
+      - "画面仕様"
+    基本設計書:
+      - "基本設計"
+    詳細設計書:
+      - "詳細設計"
+    IF設計書:
+      - "IF設計"
+      - "インターフェース"
+      - "interface"
+    問い合わせ資料:
+      - "問い合わせ"
+      - "問合せ"
+      - "QA"
+      - "Q&A"
+    障害対応資料:
+      - "障害"
+      - "不具合"
+      - "インシデント"
+      - "incident"
+      - "エラー"
+    議事録:
+      - "議事録"
+      - "打合せ"
+      - "会議"
+
+search:
+  default_top_k: 10
+  max_top_k: 50
+  default_include_archive: false
+  acl_mode: "permissive"
+  vector_weight: 0.35
+  keyword_weight: 0.45
+  metadata_weight: 0.20
+
